@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="payment_provider_form" model="ir.ui.view">
+        <field name="name">Airwallex Provider Form</field>
+        <field name="model">payment.provider</field>
+        <field name="inherit_id" ref="payment.payment_provider_form"/>
+        <field name="arch" type="xml">
+            <group name="provider_credentials" position='inside'>
+                <group invisible="code != 'airwallex'">
+                    <field
+                        name="airwallex_email_account"
+                        required="code == 'airwallex' and state != 'disabled'"
+                    />
+                    <field
+                        name="airwallex_client_id"
+                        string="Client ID"
+                        required="code == 'airwallex' and state != 'disabled'"
+                    />
+                    <field
+                        name="airwallex_client_secret"
+                        string="Client Secret"
+                        password="True"
+                        required="code == 'airwallex' and state != 'disabled'"
+                    />
+                    <label for="airwallex_webhook_id" string="Webhook ID"/>
+                    <div class="o_row" col="2">
+                        <field name="airwallex_webhook_id"/>
+                        <button
+                            string="Generate your webhook"
+                            type="object"
+                            name="action_airwallex_create_webhook"
+                            class="btn-primary"
+                            invisible="airwallex_webhook_id"
+                        />
+                    </div>
+                    <widget
+                        name="documentation_link"
+                        path="/applications/finance/payment_providers/airwallex.html"
+                        label="How to configure your airwallex account?"
+                        colspan="2"
+                    />
+                </group>
+            </group>
+        </field>
+    </record>
+
+</odoo>

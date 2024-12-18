@@ -1,0 +1,184 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* payment_airwallex
+# 
+# Translators:
+# Wil Odoo, 2024
+# Maitê Dietze, 2024
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 18.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-09-26 08:56+0000\n"
+"PO-Revision-Date: 2024-09-25 09:41+0000\n"
+"Last-Translator: Maitê Dietze, 2024\n"
+"Language-Team: Portuguese (Brazil) (https://app.transifex.com/odoo/teams/41243/pt_BR/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Language: pt_BR\n"
+"Plural-Forms: nplurals=3; plural=(n == 0 || n == 1) ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
+
+#. module: payment_airwallex
+#: model_terms:ir.ui.view,arch_db:payment_airwallex.payment_provider_form
+msgid "Client ID"
+msgstr "ID do cliente"
+
+#. module: payment_airwallex
+#: model_terms:ir.ui.view,arch_db:payment_airwallex.payment_provider_form
+msgid "Client Secret"
+msgstr "Segredo do cliente"
+
+#. module: payment_airwallex
+#: model:ir.model.fields,field_description:payment_airwallex.field_payment_provider__code
+msgid "Code"
+msgstr "Código"
+
+#. module: payment_airwallex
+#. odoo-python
+#: code:addons/payment_airwallex/models/payment_provider.py:0
+msgid "Could not establish the connection to the API."
+msgstr "Não foi possível estabelecer a conexão com a API."
+
+#. module: payment_airwallex
+#. odoo-python
+#: code:addons/payment_airwallex/models/payment_provider.py:0
+msgid "Could not generate a new access token."
+msgstr "Não foi possível gerar um novo token de acesso."
+
+#. module: payment_airwallex
+#: model:ir.model.fields,field_description:payment_airwallex.field_payment_provider__airwallex_email_account
+msgid "Email"
+msgstr "E-mail"
+
+#. module: payment_airwallex
+#: model_terms:ir.ui.view,arch_db:payment_airwallex.payment_provider_form
+msgid "Generate your webhook"
+msgstr "Gerar seu webhook"
+
+#. module: payment_airwallex
+#: model_terms:ir.ui.view,arch_db:payment_airwallex.payment_provider_form
+msgid "How to configure your airwallex account?"
+msgstr "Como configurar sua conta Airwallex?"
+
+#. module: payment_airwallex
+#. odoo-python
+#: code:addons/payment_airwallex/controllers/main.py:0
+msgid "Invalid response format, can't normalize."
+msgstr "Formato de resposta inválido, não é possível normalizar."
+
+#. module: payment_airwallex
+#. odoo-python
+#: code:addons/payment_airwallex/models/payment_transaction.py:0
+msgid "Missing value for txn_id (%(txn_id)s) or txn_type (%(txn_type)s)."
+msgstr "Valor ausente para txn_id (%(txn_id)s) ou txn_type (%(txn_type)s)."
+
+#. module: payment_airwallex
+#. odoo-python
+#: code:addons/payment_airwallex/models/payment_transaction.py:0
+msgid "No transaction found matching reference %s."
+msgstr "Nenhuma transação encontrada com a referência %s."
+
+#. module: payment_airwallex
+#: model:ir.model.fields.selection,name:payment_airwallex.selection__payment_provider__code__airwallex
+msgid "Airwallex"
+msgstr "Airwallex"
+
+#. module: payment_airwallex
+#: model:ir.model.fields,field_description:payment_airwallex.field_payment_provider__airwallex_access_token
+msgid "Airwallex Access Token"
+msgstr "Airwallex – Token de acesso"
+
+#. module: payment_airwallex
+#: model:ir.model.fields,field_description:payment_airwallex.field_payment_provider__airwallex_access_token_expiry
+msgid "Airwallex Access Token Expiry"
+msgstr "Airwallex – Expiração do token de acesso"
+
+#. module: payment_airwallex
+#: model:ir.model.fields,field_description:payment_airwallex.field_payment_provider__airwallex_client_id
+msgid "Airwallex Client ID"
+msgstr "Airwallex – ID do cliente"
+
+#. module: payment_airwallex
+#: model:ir.model.fields,field_description:payment_airwallex.field_payment_provider__airwallex_client_secret
+msgid "Airwallex Client Secret"
+msgstr "Airwallex – Segredo do cliente"
+
+#. module: payment_airwallex
+#: model:ir.model.fields,field_description:payment_airwallex.field_payment_transaction__airwallex_type
+msgid "Airwallex Transaction Type"
+msgstr "Tipo de transação do Airwallex"
+
+#. module: payment_airwallex
+#: model:ir.model.fields,field_description:payment_airwallex.field_payment_provider__airwallex_webhook_id
+msgid "Airwallex Webhook ID"
+msgstr "Airwallex – ID do Webhook"
+
+#. module: payment_airwallex
+#: model:ir.model,name:payment_airwallex.model_payment_provider
+msgid "Payment Provider"
+msgstr "Provedor de serviços de pagamento"
+
+#. module: payment_airwallex
+#: model:ir.model,name:payment_airwallex.model_payment_transaction
+msgid "Payment Transaction"
+msgstr "Transação de pagamento"
+
+#. module: payment_airwallex
+#. odoo-javascript
+#: code:addons/payment_airwallex/static/src/js/payment_form.js:0
+msgid "Payment processing failed"
+msgstr "Falha no processamento do pagamento"
+
+#. module: payment_airwallex
+#. odoo-python
+#: code:addons/payment_airwallex/models/payment_transaction.py:0
+msgid "Received data with invalid payment status: %s"
+msgstr "Dados recebidos com status de pagamento inválido: %s"
+
+#. module: payment_airwallex
+#. odoo-python
+#: code:addons/payment_airwallex/models/payment_provider.py:0
+msgid "The communication with the API failed. Details: %s"
+msgstr "A comunicação com a API falhou. Detalhes: %s"
+
+#. module: payment_airwallex
+#. odoo-python
+#: code:addons/payment_airwallex/models/payment_transaction.py:0
+msgid "The customer left the payment page."
+msgstr "O cliente saiu da página de pagamento."
+
+#. module: payment_airwallex
+#: model:ir.model.fields,help:payment_airwallex.field_payment_provider__airwallex_access_token_expiry
+msgid "The moment at which the access token becomes invalid."
+msgstr "O momento em que o token de acesso se torna inválido."
+
+#. module: payment_airwallex
+#: model:ir.model.fields,help:payment_airwallex.field_payment_provider__airwallex_email_account
+msgid ""
+"The public business email solely used to identify the account with Airwallex"
+msgstr ""
+"O e-mail comercial público usado exclusivamente para identificar a conta com"
+" o Airwallex"
+
+#. module: payment_airwallex
+#: model:ir.model.fields,help:payment_airwallex.field_payment_provider__airwallex_access_token
+msgid "The short-lived token used to access Airwallex APIs"
+msgstr "O token de curta duração usado para acessar as APIs do Airwallex"
+
+#. module: payment_airwallex
+#: model:ir.model.fields,help:payment_airwallex.field_payment_provider__code
+msgid "The technical code of this payment provider."
+msgstr "O código técnico deste provedor de pagamento."
+
+#. module: payment_airwallex
+#: model_terms:ir.ui.view,arch_db:payment_airwallex.payment_provider_form
+msgid "Webhook ID"
+msgstr "ID do Webhook"
+
+#. module: payment_airwallex
+#. odoo-python
+#: code:addons/payment_airwallex/models/payment_provider.py:0
+msgid "You must have an HTTPS connection to generate a webhook."
+msgstr "Você deve ter uma conexão HTTPS para gerar um webhook."
