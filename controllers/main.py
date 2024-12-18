@@ -19,7 +19,27 @@ _logger = logging.getLogger(__name__)
 
 class AirwallexController(http.Controller):
     _complete_url = '/payment/airwallex/complete_order'
+    _refund_url = '/payment/airwallex/refund'
     _webhook_url = '/payment/airwallex/webhook/'
+
+    @http.route(_refund_url, type='json', auth='public', methods=['POST'])
+    def airwallex_refund(self, provider_id, transaction_id, amount=None):
+        """ Make a refund request to Airwallex.
+
+        :param int provider_id: The provider handling the transaction, as a `payment.provider` id.
+        :param str transaction_id: The transaction id provided by Airwallex to identify the transaction.
+        :param float amount: The amount to refund, as a float.
+        :return: None
+        """
+        provider_sudo = request.env['payment.provider'].browse(provider_id).sudo()
+        response = provider_sudo._airwallex_make_request(
+            f'/v1/transactions/{transaction_id}/refund', data={'amount': amount}
+        )
+        normalized_response = self._normalize_airwallex_data(response)
+        tx_sudo = request.env['payment.transaction'].sudo()._get_tx_from_notification_data(
+            'airwallex', normalized_response
+        )
+        tx_sudo._handle_notification_data('airwallex', normalized_response)
 
     @http.route(_complete_url, type='json', auth='public', methods=['POST'])
     def airwallex_complete_order(self, provider_id, order_id, reference=None):

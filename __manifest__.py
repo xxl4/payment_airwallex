@@ -5,6 +5,8 @@
     'version': '1.0',
     'category': 'Accounting/Payment Providers',
     'summary': "An Airwallex payment provider for online payments all over the world.",
+    'author': "Steve Liu",
+    'sequence': 5000,
     'description': " ",  # Non-empty string to avoid loading the README file.
     'depends': ['payment'],
     'data': [
@@ -21,4 +23,5 @@
         ],
     },
     'license': 'LGPL-3',
+    'installable': True,
 }
