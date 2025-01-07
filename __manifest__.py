@@ -2,18 +2,14 @@
 
 {
     'name': 'Payment Provider: Airwallex',
-    'version': '1.0',
+    'version': '1.1',
     'category': 'Accounting/Payment Providers',
     'summary': "An Airwallex payment provider for online payments all over the world.",
     'author': "Steve Liu",
-    'sequence': 5000,
-    'description': " ",  # Non-empty string to avoid loading the README file.
-    'depends': ['payment'],
+    'description': "This module adds Airwallex as a payment method in Odoo.",  # Non-empty string to avoid loading the README file.
+    'depends': ['payment','account'],
     'data': [
-        'views/payment_form_templates.xml',
-        'views/payment_provider_views.xml',
-        'views/payment_transaction_views.xml',
-        'data/payment_provider_data.xml',
+        'views/payment_method_views.xml',
     ],
     'post_init_hook': 'post_init_hook',
     'uninstall_hook': 'uninstall_hook',

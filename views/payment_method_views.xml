@@ -1,0 +1,25 @@
+<odoo>
+    <data>
+        <record id="view_payment_method_form" model="ir.ui.view">
+            <field name="name">account.payment.method.form</field>
+            <field name="model">account.payment.method</field>
+            <field name="arch" type="xml">
+                <form string="Payment Method">
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                            <field name="code"/>
+                            <field name="payment_type"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_payment_method" model="ir.actions.act_window">
+            <field name="name">Payment Methods</field>
+            <field name="res_model">account.payment.method</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+    </data>
+</odoo>
